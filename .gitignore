@@ -1,0 +1,6 @@
+
+# Compiled Java files
+*.class
+
+# VS Code configuration (optional)
+.vscode/
