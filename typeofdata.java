@@ -1,6 +1,74 @@
 public class typeofdata {
     public static void main(String[] args) {
 
+        // 1. BYTE (1 byte)
+        byte age = 25; // Small integer: -128 to 127
+
+        // 2. SHORT (2 bytes)
+        short salary = 30000; // Integer: -32,768 to 32,767
+
+        // 3. INT (4 bytes)
+        int population = 100000; // Whole number
+
+        // 4. LONG (8 bytes)
+        long distance = 9876543210L; // Large integer (L suffix)
+
+        // 5. FLOAT (4 bytes)
+        float height = 5.9f; // Decimal number (f suffix)
+
+        // 6. DOUBLE (8 bytes)
+        double price = 999.99; // Decimal number (default decimal type)
+
+        // 7. CHAR (2 bytes)
+        char grade = 'A'; // Single character (single quotes)
+
+        // 8. BOOLEAN (JVM-dependent storage)
+        boolean isStudent = true; // true or false
+
+
+        // NON-PRIMITIVE / REFERENCE DATA TYPES
+
+        // 9. STRING
+        String name = "Dinesh"; // Sequence of characters
+
+        // 10. ARRAY
+        int[] marks = {85, 90, 95}; // Collection of same-type values
+
+        // 11. CLASS / OBJECT
+        Student student = new Student("Arun", 21); // Object creation
+
+        // 12. INTERFACE REFERENCE
+        Animal animal = new Dog(); // Interface implemented by Dog
+
+        // 13. ENUM
+        Day today = Day.MONDAY; // Fixed set of constants
+
+        // 14. RECORD (Java 16+)
+        Person person = new Person("Bala", 22); // Data-carrying object
+
+
+        // PRINT PRIMITIVE TYPES
+        System.out.println("=== Primitive Types ===");
+        System.out.println(age);
+        System.out.println(salary);
+        System.out.println(population);
+        System.out.println(distance);
+        System.out.println(height);
+        System.out.println(price);
+        System.out.println(grade);
+        System.out.println(isStudent);
+
+
+        // PRINT REFERENCE TYPES
+        System.out.println("\n=== Reference Types ===");
+        System.out.println(name);
+        System.out.println(marks[0]); // First array element
+        System.out.println(student.name);
+        System.out.println(animal.sound());
+        System.out.println(today);
+        System.out.println(person.name());
+
+
         //type casting
         int a = 10;
         //automatic,widening
@@ -16,7 +84,7 @@ public class typeofdata {
         byte e = 20;
         int f = d+e; 
         System.out.println(f);
-        //there is function to check type of data in java
+        //there is no function to check type of data in java
 
         //wrapper class
 
@@ -41,3 +109,34 @@ public class typeofdata {
         int manualUnboxed = objectVar.intValue(); 
     }
 }
+
+// CLASS
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+// INTERFACE
+interface Animal {
+    String sound();
+}
+
+// IMPLEMENTATION
+class Dog implements Animal {
+    public String sound() {
+        return "Bark";
+    }
+}
+
+// ENUM
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY
+}
+
+// RECORD
+record Person(String name, int age) {}
