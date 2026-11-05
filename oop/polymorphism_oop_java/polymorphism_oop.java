@@ -1,16 +1,16 @@
 package oop.polymorphism_oop_java;
 //compile-time-polymorphism
 class Calculator{
-    public void add(int a,int b){
+    void add(int a,int b){
         System.out.println("Addition: "+ (a+b));
     }
-    public void add(double a, double b){
+    void add(double a, double b){
         System.out.println("Addition: "+ (a+b));
     }
-    public void add(int a,int b,int c){
+    void add(int a,int b,int c){
         System.out.println("Addition: "+ (a+b+c));
     }
-    public void add(String a,String b){
+    void add(String a,String b){
         System.out.println("Concatenation: "+ a.concat(b));
     }
 }
