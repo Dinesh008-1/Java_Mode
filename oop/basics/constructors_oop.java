@@ -1,4 +1,6 @@
-package oop;
+package oop.basics;
+
+
 //constructor overloading
 class Student{
     String name;

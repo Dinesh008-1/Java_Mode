@@ -1,4 +1,4 @@
-package oop;
+package oop.encapsulation;
 
 class BankAccount{
     //1.private variable - data hiding
